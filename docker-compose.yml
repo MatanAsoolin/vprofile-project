@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   vprodb:
     build:
@@ -12,8 +11,7 @@ services:
       - vprodbdata:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
-  redis:
-    image: "redis:alpine"
+
   
   vprocache01:
   image: memcached
@@ -49,7 +47,7 @@ services:
 volumes:
   vprodbdata: {}
   vproappdata: {}
-  
+
 
 
 
